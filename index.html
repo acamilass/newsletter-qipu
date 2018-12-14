@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Newsletter Qipu</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="news">
+
+            <div class="news-body">
+
+                <div class="news-body-header">
+                    <img src="header-image.png" alt="header-image">
+                </div>
+
+                <div class="news-body-text">
+                    <p>Olá, <span id="name"></span></p>
+                    <p>Meu nome é Alessandra Gomes e eu faço parte da equipe do Qipu, o aplicativo braço direito do empreendedor.</p>
+                    <p>Este contato é para te dar parabéns pela abertura da sua empresa</p>
+                    <p><b>Razão Social: <span id="razao"></span></b></p>
+                    <p style="margin-top:0"><b>CNPJ: <span id="cnpj"></span></b></p>
+                    <p>Desejo muita sorte neste início de negócio e quero te ajudar a encontrar a solução para a burocracia
+                        que pode surgir com o tempo. Quer fugir disso? Com o Qipu você consegue.
+                    </p>
+                    <p><span style="color:#FA9963">Nosso aplicativo é perfeito para que você realize a gestão financeira da sua empresa</span>, consiga controlar
+                        os lançamentos, entender as entradas e saídas do seu negócio e emitir notas fiscais relacionadas aos seus
+                        serviços.                        
+                    </p>
+                    <p>Já pensou em emitir suas notas fiscais sem precisar acessar o site da prefeitura ou ligar para o seu contador?
+                        E se eu te contar que no Qipu você pode fazer tudo isso e muito mais em apenas alguns cliques?
+                    </p>
+                    <p><span style="color:#FA9963">Baixe o app agora gratuitamente</span> e teste nossas ferramentas. Você vai ver como é fácil.</p>
+                </div>
+
+                <div class="news-body-stores">
+                    <a href="https://itunes.apple.com/br/app/qipu-contabilidade-e-emissao/id970158643?mt=8" target="_blank">
+                        <img src="app-store.png" alt="app-store">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=br.com.qipu.app&hl=pt_BR" target="_blank">
+                        <img src="google-play.png" alt="google-play">
+                    </a>                    
+                </div>
+
+                <div class="news-body-text-final">
+                    <p>Qualquer dúvida é só chamar. ;)</p>
+                    <p>#Para que você veja como o Qipu é fácil, separei um vídeo que explica como emitir notas fiscais pelo
+                        nosso app. Teste agora!
+                    </p>
+                    <img src="video.png" alt="video-thumb">
+                </div>
+
+                <div class="news-body-assign">
+                    <p><b>Abraços e bons negócios!</b></p>
+                    <p>Alessandra Gomes</p>
+                </div>
+
+            </div>
+
+            <div class="news-footer">
+
+                <a href="https://www.qipu.com.br" style="text-decoration:none;color:#4385BF">www.qipu.com.br</a>
+
+                <div class="news-footer-social">
+                    <a href="https://www.qipu.com.br/blog/" target="_blank">
+                        <div class="blog-icon">
+                            <div class="blog-icon-text">
+                                <span>BLOG</span>
+                            </div>                            
+                        </div>
+                    </a>
+                    <a href="http://facebook.com/qipubr" target="_blank">
+                        <img src="facebook-icon.png" alt="facebook-icon">
+                    </a>
+                    <a href="https://twitter.com/qipubrasil" target="_blank">
+                        <img src="twitter-icon.png" alt="twitter-icon">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCnjyJBmAkKTVGNPOQZftwlQ" target="_blank">
+                        <img src="youtube-icon.png" alt="youtube-icon">
+                    </a>
+                </div>
+
+                <div class="news-footer-assign">
+                    <p style="margin-bottom: 3px">Empreendedor Simples e Legal Contabilidade S.S</p>
+                    <p style="margin-top:0">CNPJ 27.119.334/0001-35 CRC SP032638/0</p>
+                    <a href="" target="_blank" style="color:#2B348A">Cancelar o recebimento deste e-mail</a>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <script>
+            
+            var user = {
+                email: "joao_paulo@gmail.com",
+                nome: "João Paulo",
+                razao: "Energiza Soluções Elétricas S.A.",
+                cnpj: "34564789000178"
+            }
+
+            document.querySelector("#name").innerHTML = this.user.nome;
+            document.querySelector("#razao").innerHTML = this.user.razao;
+            document.querySelector("#cnpj").innerHTML = formatCnpj(this.user.cnpj);
+
+            function formatCnpj(newCnpj) {
+                return newCnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5");
+            }
+
+        
+        </script>
+
+    </body>
+</html>
